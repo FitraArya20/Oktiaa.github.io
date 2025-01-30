@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Inventori Barang</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Selamat Datang di Inventori Barang</h1>
+        <p class="welcome-message">Halo, <span id="usernameDisplay"></span>! Anda berhasil login.</p>
+        <button onclick="logout()">Logout</button>
+        <hr>
+        <!-- Tabel inventori akan muncul di sini -->
+        <section class="inventory">
+            <h2>Daftar Inventori</h2>
+            <table id="inventoryTable">
+                <thead>
+                    <tr>
+                        <th>Nama Barang</th>
+                        <th>Jumlah</th>
+                        <th>Harga</th>
+                        <th>Kategori</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data inventori akan dimuat di sini -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
