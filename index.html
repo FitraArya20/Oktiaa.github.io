@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventori Barang - Wau!</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Inventori Barang</h1>
+    </header>
+
+    <div class="container">
+        <!-- Form input barang -->
+        <section class="add-item">
+            <h2>Tambah Barang</h2>
+            <form id="addItemForm">
+                <input type="text" id="itemName" placeholder="Nama Barang" required>
+                <input type="number" id="itemQuantity" placeholder="Jumlah Barang" required>
+                <input type="number" id="itemPrice" placeholder="Harga Barang" required>
+                <select id="itemCategory">
+                    <option value="">Pilih Kategori</option>
+                    <option value="Elektronik">Elektronik</option>
+                    <option value="Makanan">Makanan</option>
+                    <option value="Pakaian">Pakaian</option>
+                </select>
+                <button type="submit">Tambah Barang</button>
+            </form>
+        </section>
+
+        <!-- Tabel Inventori -->
+        <section class="inventory">
+            <h2>Daftar Inventori</h2>
+            <input type="text" id="searchInput" placeholder="Cari Barang..." oninput="searchItem()">
+            <table id="inventoryTable">
+                <thead>
+                    <tr>
+                        <th>Nama Barang</th>
+                        <th>Jumlah</th>
+                        <th>Harga</th>
+                        <th>Kategori</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Daftar barang akan muncul di sini -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Grafik Stok Barang -->
+        <section class="chart">
+            <h2>Grafik Stok Barang</h2>
+            <canvas id="inventoryChart" width="400" height="200"></canvas>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
